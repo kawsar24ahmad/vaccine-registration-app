@@ -11,9 +11,7 @@ Route::get('/', function () {
     return to_route('users.register');
 });
 
-Route::get('/test', function ()  {
 
-});
 
 Route::get('/register', [AuthController::class, 'register'])->name('users.register');
 Route::post('/register', [AuthController::class, 'store'])->name('users.store');
@@ -31,4 +29,4 @@ Route::get('/users/not-scheduled', function ()  {
 Route::get('vaccine_centers', [VaccineCenterController::class, 'index'])->name('vaccine_centers.index');
 Route::get('vaccine_centers/{id}', [VaccineCenterController::class, 'show'])->name('vaccine_centers.show');
 
-Route::get('/schedule',[ScheduleController::class, 'scheduleUser']);
+
